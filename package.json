@@ -1,0 +1,14 @@
+{
+    "name": "copyright-bypass-skip",
+    "version": "1.0.0",
+    "description": "Skips the silence some SoundCloud uploads add to bypass copyright detection. A soundcloud-rpc plugin and a browser extension.",
+    "author": "foidtech",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "node scripts/build.mjs",
+        "lint:firefox": "npx --yes web-ext lint --source-dir dist/extension",
+        "package:extension": "npx --yes web-ext build --source-dir dist/extension --artifacts-dir dist --filename copyright-bypass-skip-extension.zip --overwrite-dest"
+    }
+}

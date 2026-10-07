@@ -1,0 +1,53 @@
+var SETTINGS = [
+    {
+        key: 'enabled',
+        type: 'toggle',
+        default: true,
+        label: 'Enabled',
+        extensionOnly: true,
+    },
+    {
+        key: 'skipLeading',
+        type: 'toggle',
+        default: true,
+        label: 'Skip silence at the start',
+    },
+    {
+        key: 'skipMiddle',
+        type: 'toggle',
+        default: true,
+        label: 'Skip silence in the middle',
+    },
+    {
+        key: 'skipTrailing',
+        type: 'toggle',
+        default: true,
+        label: 'Skip silence at the end',
+        hint: 'Goes straight to the next track.',
+    },
+    {
+        key: 'minSilenceSeconds',
+        type: 'number',
+        default: 5,
+        min: 1,
+        max: 120,
+        unit: 's',
+        label: 'Shortest silence to skip',
+        hint: 'Shorter pauses are left alone so real breaks in a song still play.',
+    },
+    {
+        key: 'silenceLevel',
+        type: 'number',
+        default: 2,
+        min: 0,
+        max: 20,
+        label: 'Silence level',
+        hint: 'Waveform bars go from 0 to 140 and padding is a flat 0. Anything at or below this counts as silence.',
+    },
+    {
+        key: 'showToast',
+        type: 'toggle',
+        default: true,
+        label: 'Show a notice when skipping',
+    },
+];
